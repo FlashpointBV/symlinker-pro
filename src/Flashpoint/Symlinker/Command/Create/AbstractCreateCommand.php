@@ -1,14 +1,8 @@
 <?php
-/**
- * AbstractCommand
- *
- * Copyright © 2017 Staempfli AG. All rights reserved.
- * @author    juan.alonso@staempfli.com
- */
 
-namespace Staempfli\Symlinker\Command\Create;
+namespace Flashpoint\Symlinker\Command\Create;
 
-use Staempfli\Symlinker\Task\SymlinkTask;
+use Flashpoint\Symlinker\Task\SymlinkTask;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\QuestionHelper;
 use Symfony\Component\Console\Input\InputInterface;

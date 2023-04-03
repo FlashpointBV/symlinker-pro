@@ -1,12 +1,6 @@
 <?php
-/**
- * RelativeTargetHelper
- *
- * Copyright © 2017 Staempfli AG. All rights reserved.
- * @author    juan.alonso@staempfli.com
- */
 
-namespace Staempfli\Symlinker\Helper;
+namespace Flashpoint\Symlinker\Helper;
 
 class RelativeTargetHelper
 {

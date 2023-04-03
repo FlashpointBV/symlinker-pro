@@ -1,15 +1,9 @@
 <?php
-/**
- * UpdateSelfCommand
- *
- * Copyright © 2017 Staempfli AG. All rights reserved.
- * @author    juan.alonso@staempfli.com
- */
 
-namespace Staempfli\Symlinker\Command\Phar;
+namespace Flashpoint\Symlinker\Command\Phar;
 
 use Humbug\SelfUpdate\Updater as PharUpdater;
-use Staempfli\Symlinker\Helper\ApplicationHelper;
+use Flashpoint\Symlinker\Helper\ApplicationHelper;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -71,7 +65,7 @@ EOT
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $this->updater->getStrategy()->setPackageName('staempfli/symlinker-pro');
+        $this->updater->getStrategy()->setPackageName('flashpoint/symlinker-pro');
         $this->updater->getStrategy()->setPharName('symlinker-pro.phar');
         $this->updater->getStrategy()->setCurrentLocalVersion('@git-version@');
 

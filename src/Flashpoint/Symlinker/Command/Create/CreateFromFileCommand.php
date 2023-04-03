@@ -1,14 +1,8 @@
 <?php
-/**
- * CreateFromFileCommand
- *
- * Copyright © 2017 Staempfli AG. All rights reserved.
- * @author    juan.alonso@staempfli.com
- */
 
-namespace Staempfli\Symlinker\Command\Create;
+namespace Flashpoint\Symlinker\Command\Create;
 
-use Staempfli\Symlinker\Helper\FileHelper;
+use Flashpoint\Symlinker\Helper\FileHelper;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
