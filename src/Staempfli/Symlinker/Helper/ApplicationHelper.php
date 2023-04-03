@@ -1,6 +1,12 @@
 <?php
+/**
+ * ApplicationHelper
+ *
+ * Copyright © 2017 Staempfli AG. All rights reserved.
+ * @author    juan.alonso@staempfli.com
+ */
 
-namespace Flashpoint\Symlinker\Helper;
+namespace Staempfli\Symlinker\Helper;
 
 
 class ApplicationHelper

@@ -25,8 +25,8 @@ use Symfony\Component\Console\Application;
 $application = new Application('@git-version@');
 
 // Custom commands
-$application->add(new Flashpoint\Symlinker\Command\Create\CreateLinkCommand());
-$application->add(new Flashpoint\Symlinker\Command\Create\CreateFromFileCommand());
-$application->add(new Flashpoint\Symlinker\Command\Phar\SelfUpdateCommand());
+$application->add(new Staempfli\Symlinker\Command\Create\CreateLinkCommand());
+$application->add(new Staempfli\Symlinker\Command\Create\CreateFromFileCommand());
+$application->add(new Staempfli\Symlinker\Command\Phar\SelfUpdateCommand());
 
 $application->run();

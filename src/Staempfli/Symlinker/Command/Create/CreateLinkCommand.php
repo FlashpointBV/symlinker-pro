@@ -1,6 +1,12 @@
 <?php
+/**
+ * CreateLinkCommand
+ *
+ * Copyright © 2017 Staempfli AG. All rights reserved.
+ * @author    juan.alonso@staempfli.com
+ */
 
-namespace Flashpoint\Symlinker\Command\Create;
+namespace Staempfli\Symlinker\Command\Create;
 
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;

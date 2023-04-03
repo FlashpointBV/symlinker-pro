@@ -24,9 +24,18 @@ Small tool that creates **relative** symlinks from given paths. A file containin
 ### Option1: Using Composer
 
 ```
-composer require "flashpoint/symlinker-pro":"~1.0"
+composer require "staempfli/symlinker-pro":"~1.0"
 ```
 
+
+### Option2: Downloading .phar
+
+
+```
+wget https://github.com/staempfli/symlinker-pro/releases/download/<version>/symlinker-pro.phar
+chmod +x ./symlinker-pro.phar
+sudo mv ./symlinker-pro.phar /usr/local/bin/symlinker-pro
+```
 
 ## Usage
 
@@ -59,4 +68,16 @@ If your destination paths should be calculated from a different path than the cu
 
 ## Requirements
 
-- PHP >= 7.4
+- PHP >= 5.5
+
+## Developers
+
+* [Juan Alonso](https://github.com/jalogut)
+
+Licence
+-------
+[GNU General Public License, version 3 (GPLv3)](http://opensource.org/licenses/gpl-3.0)
+
+Copyright
+---------
+(c) 2016 Staempfli AG

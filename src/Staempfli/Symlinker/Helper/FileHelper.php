@@ -1,6 +1,11 @@
 <?php
-
-namespace Flashpoint\Symlinker\Helper;
+/**
+ * FileHelper
+ *
+ * Copyright © 2017 Staempfli AG. All rights reserved.
+ * @author    juan.alonso@staempfli.com
+ */
+namespace Staempfli\Symlinker\Helper;
 
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;

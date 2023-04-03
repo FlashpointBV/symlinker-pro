@@ -1,10 +1,15 @@
 <?php
+/**
+ * SymlinkHelper
+ *
+ * Copyright © 2017 Staempfli AG. All rights reserved.
+ * @author    juan.alonso@staempfli.com
+ */
+namespace Staempfli\Symlinker\Task;
 
-namespace Flashpoint\Symlinker\Task;
-
-use Flashpoint\Symlinker\Helper\FileHelper;
-use Flashpoint\Symlinker\Helper\RelativeTargetHelper;
-use Flashpoint\Symlinker\Helper\SourcePathHelper;
+use Staempfli\Symlinker\Helper\FileHelper;
+use Staempfli\Symlinker\Helper\RelativeTargetHelper;
+use Staempfli\Symlinker\Helper\SourcePathHelper;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class SymlinkTask
