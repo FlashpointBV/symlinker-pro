@@ -9,6 +9,7 @@
 namespace Staempfli\Symlinker\Command\Create;
 
 use Staempfli\Symlinker\Helper\FileHelper;
+use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -76,6 +77,8 @@ class CreateFromFileCommand extends AbstractCreateCommand
             $this->symlinkTask->createSymlink($source, $dest);
         }
         $output->writeln('<bg=green;options=bold>Symlinks successfully created!</>');
+
+        return Command::SUCCESS;
     }
 
     /**
