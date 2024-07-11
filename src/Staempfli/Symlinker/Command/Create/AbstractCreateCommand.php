@@ -71,7 +71,7 @@ abstract class AbstractCreateCommand extends Command
     /**
      * @inheritdoc
      */
-    public function run(InputInterface $input, OutputInterface $output)
+    public function run(InputInterface $input, OutputInterface $output): int
     {
         $this->questionHelper = $this->getHelper('question');
         $this->symlinkTask->setConsoleOutput($output);

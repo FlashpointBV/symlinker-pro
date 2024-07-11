@@ -12,11 +12,11 @@
     }
   ],
   "require": {
-    "symfony/console": "~5.4|~4.1|~3.0|~2.1",
+    "symfony/console": "^6.0",
     "padraic/phar-updater": "1.0.*"
   },
   "require-dev": {
-    "kherge/box": "~2.5"
+    "humbug/box": "^4.6"
   },
   "autoload": {
     "psr-4": { "Staempfli\\Symlinker\\": "src/Staempfli/Symlinker/" }
