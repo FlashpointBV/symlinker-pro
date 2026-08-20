@@ -82,7 +82,7 @@ class SourcePathHelper
      */
     protected function getDirPathWithoutEndWildcard($wildcard)
     {
-        if (!$this->hasPathEndWildCard($this->path, $wildcard)) {
+        if (!$this->hasPathEndWildCard($wildcard)) {
             throw new \Exception(sprintf('Path %s does not ends with wildcard: %s', $this->path, $wildcard));
         }
         $dirPath = substr($this->path, 0, -strlen($wildcard));

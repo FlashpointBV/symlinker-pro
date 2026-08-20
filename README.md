@@ -68,7 +68,7 @@ If your destination paths should be calculated from a different path than the cu
 
 ## Requirements
 
-- PHP >= 5.5
+- PHP >= 8.3
 
 ## Developers
 

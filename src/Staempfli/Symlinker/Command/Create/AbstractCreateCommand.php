@@ -38,7 +38,7 @@ abstract class AbstractCreateCommand extends Command
         $this->symlinkTask = new SymlinkTask();
     }
 
-    protected function configure()
+    protected function configure(): void
     {
         $this->addOption(
             self::OPTION_ROOT_DIR,
@@ -81,7 +81,7 @@ abstract class AbstractCreateCommand extends Command
     /**
      * @inheritdoc
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $rootDir = $input->getOption(self::OPTION_ROOT_DIR);
         if (is_string($rootDir)) {
@@ -99,5 +99,7 @@ abstract class AbstractCreateCommand extends Command
         if ($input->getOption(self::OPTION_CREATE_DIRECTORY)) {
             $this->symlinkTask->enableCreateDirectory();
         }
+
+        return Command::SUCCESS;
     }
 }

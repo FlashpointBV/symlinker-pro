@@ -12,17 +12,22 @@
     }
   ],
   "require": {
-    "symfony/console": "^6.0",
-    "padraic/phar-updater": "1.0.*"
+    "php": "^8.3",
+    "laravel-zero/phar-updater": "^1.4",
+    "symfony/console": "^7.4"
   },
   "require-dev": {
-    "humbug/box": "^4.6"
+    "humbug/box": "^4.7"
   },
   "autoload": {
     "psr-4": { "Staempfli\\Symlinker\\": "src/Staempfli/Symlinker/" }
   },
   "config": {
-    "bin-dir": "bin"
+    "bin-dir": "bin",
+    "platform": {
+      "php": "8.3.0"
+    },
+    "sort-packages": true
   },
   "bin": ["bin/symlinker-pro"],
   "scripts": {

@@ -8,6 +8,7 @@
 
 namespace Staempfli\Symlinker\Command\Create;
 
+use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -18,7 +19,7 @@ class CreateLinkCommand extends AbstractCreateCommand
     const ARG_SOURCE = 'source';
     const ARG_DESTINATION = 'destination';
 
-    protected function configure()
+    protected function configure(): void
     {
         parent::configure();
 
@@ -38,7 +39,7 @@ class CreateLinkCommand extends AbstractCreateCommand
     /**
      * @inheritdoc
      */
-    protected function interact(InputInterface $input, OutputInterface $output)
+    protected function interact(InputInterface $input, OutputInterface $output): void
     {
         parent::interact($input, $output);
 
@@ -57,7 +58,7 @@ class CreateLinkCommand extends AbstractCreateCommand
     /**
      * @inheritdoc
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         parent::execute($input, $output);
 
@@ -66,5 +67,7 @@ class CreateLinkCommand extends AbstractCreateCommand
         $this->symlinkTask->createSymlink($source, $dest);
 
         $output->writeln('<bg=green;options=bold>Symlink successfully created!</>');
+
+        return Command::SUCCESS;
     }
 }

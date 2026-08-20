@@ -32,7 +32,7 @@ class CreateFromFileCommand extends AbstractCreateCommand
         $this->fileHelper = new FileHelper();
     }
 
-    protected function configure()
+    protected function configure(): void
     {
         parent::configure();
 
@@ -53,7 +53,7 @@ class CreateFromFileCommand extends AbstractCreateCommand
     /**
      * @inheritdoc
      */
-    protected function interact(InputInterface $input, OutputInterface $output)
+    protected function interact(InputInterface $input, OutputInterface $output): void
     {
         parent::interact($input, $output);
         if (!$input->getArgument(self::ARG_FILE_PATH)) {
@@ -66,7 +66,7 @@ class CreateFromFileCommand extends AbstractCreateCommand
     /**
      * @inheritdoc
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         parent::execute($input, $output);
 
@@ -115,7 +115,7 @@ class CreateFromFileCommand extends AbstractCreateCommand
     {
         $prefixPath = $input->getOption(self::OPTION_DESTINATION_PREFIX);
         if ($prefixPath && !$this->fileHelper->isAbsolutePath($path)) {
-            $prefixPath .= (strpos($prefixPath, -1) != '/') ? '/' : '';
+            $prefixPath .= (substr($prefixPath, -1) !== '/') ? '/' : '';
             return $prefixPath . $path;
         }
         return $path;

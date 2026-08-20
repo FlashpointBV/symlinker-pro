@@ -36,7 +36,7 @@ class SelfUpdateCommand extends Command
         parent::__construct($name);
     }
 
-    public function configure()
+    public function configure(): void
     {
         $applicationFileName = $this->applicationHelper->getApplicationFileName();
 
@@ -57,7 +57,7 @@ EOT
     /**
      * @return bool
      */
-    public function isEnabled()
+    public function isEnabled(): bool
     {
         $pharFilePath = $this->applicationHelper->getPharPath();
         if ($pharFilePath) {
@@ -69,7 +69,7 @@ EOT
     /**
      * @inheritdoc
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->updater->getStrategy()->setPackageName('staempfli/symlinker-pro');
         $this->updater->getStrategy()->setPharName('symlinker-pro.phar');
@@ -86,7 +86,11 @@ EOT
             }
         } catch (\Exception $e) {
             $output->writeln('<error>There was an error while updating. Please try again later</error>');
+
+            return Command::FAILURE;
         }
+
+        return Command::SUCCESS;
     }
 
 }

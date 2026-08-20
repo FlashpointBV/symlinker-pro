@@ -3,5 +3,7 @@
 /bin/*
 !bin/symlinker-pro
 /vendor
+/graphify-out
+composer.lock
 
 symlinker-pro.phar

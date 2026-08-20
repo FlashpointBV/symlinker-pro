@@ -8,6 +8,9 @@
       "name": "*.php",
       "in": "vendor",
       "exclude": ["kherge", "Tests", "Test", "tests", "test"]
+    },
+    {
+      "in": "vendor/symfony/console/Resources"
     }
   ],
   "git-version": "git-version",
